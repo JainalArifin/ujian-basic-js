@@ -3,6 +3,7 @@ digitsGrouper = (angka) => {
     let arr1 = []
     let arr2 = []
     let arr3 = []
+    let arr4 = []
     for(let i =0; i < angka.length; i++){
         if(angka[i] < 10){
             arr1.push(angka[i])
@@ -10,11 +11,14 @@ digitsGrouper = (angka) => {
             arr2.push(angka[i])
         }else if(angka[i] > 100 && angka[i] < 1000){
             arr3.push(angka[i])
+        }else if(angka[i] > 1000 && angka[i] < 10000){
+            arr4.push(angka[i])
         }
     }
     tmp.push(arr1)
     tmp.push(arr2)
     tmp.push(arr3)
+    tmp.push(arr4)
     // console.log(tmp)
     return tmp
 }
